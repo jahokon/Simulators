@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  portfoliopilot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: simulators
+    container_name: simulators
+    ports:
+      - "5510:5510"
+    volumes:
+      - /home/hofja/xblr-files:/home/hofja/xblr-files
+    command: ["java",  "-Dserver.port=5510","-jar", "/app/simulators-0.9.jar"]
+    environment:
+      - JAVA_OPTS=
+    restart: unless-stopped
+

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: TimeMachine
+  datasource:
+    url: jdbc:postgresql://192.168.0.6:5434/worldtrader?reWriteBatchedInserts=true
+    username: wtviewer
+    password: Nf%cEpXCPkYW
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
